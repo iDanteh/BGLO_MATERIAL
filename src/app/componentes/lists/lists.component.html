@@ -1,0 +1,15 @@
+<mat-list role="list">
+    <mat-list-item role="listitem">Item 1</mat-list-item>
+    <mat-list-item role="listitem">Item 2</mat-list-item>
+    <mat-list-item role="listitem">Item 3</mat-list-item>
+</mat-list>
+
+<mat-selection-list #shoes>
+    @for (shoe of typesOfShoes; track shoe) {
+    <mat-list-option>{{shoe}}</mat-list-option>
+    }
+</mat-selection-list>
+
+<p>
+    Options selected: {{shoes.selectedOptions.selected.length}}
+</p>
